@@ -4,6 +4,7 @@ export default function ProfileCard({ profile }: { profile: StoreProfile }) {
   return (
     <section className="rounded-2xl border bg-white p-4 md:p-5 shadow-sm">
       <div className="mb-3 flex items-center gap-3">
+        {/* Adicionar a logica da logo da loja aqui */}
         <div className="size-10 md:size-12 rounded-xl bg-neutral-200" />
         <div>
           <h2 className="text-base md:text-lg font-semibold leading-tight">
@@ -28,11 +29,6 @@ export default function ProfileCard({ profile }: { profile: StoreProfile }) {
           <dd className="text-lg break-all">{profile.whatsapp}</dd>
         </div>
 
-        {/* Item 3: Descrição curta
-     - CORRIGIDO: Movido para DENTRO do <dl>.
-     - min-[550px]:col-span-2: Faz ele ocupar as 2 colunas 
-       quando a tela for maior que 550px.
-  */}
         <div className="min-[550px]:col-span-2">
           <dt className="text-2xl font-medium text-teal-900">
             Descrição curta
