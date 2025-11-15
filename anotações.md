@@ -5,3 +5,5 @@
 1. Adicionar a imagem da loja e dos produtos no dashboard.
 
 teste teste
+
+friamente calculado abadaba
