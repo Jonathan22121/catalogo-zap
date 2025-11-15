@@ -11,10 +11,12 @@ export default function Register() {
         {/* ESQUERDA: copy/benefícios */}
         <section className="order-2 md:order-1">
           <h1 className="text-3xl font-semibold leading-tight md:text-5xl">
-            Crie sua conta e publique seu <span className="text-emerald-600">Catálogo</span>
+            Crie sua conta e publique seu{" "}
+            <span className="text-emerald-600">Catálogo</span>
           </h1>
           <p className="mt-4 max-w-lg text-gray-600">
-            Em poucos minutos você já pode cadastrar produtos e compartilhar pedidos pelo WhatsApp.
+            Em poucos minutos você já pode cadastrar produtos e compartilhar
+            pedidos pelo WhatsApp.
           </p>
 
           <ul className="mt-8 space-y-4 text-gray-800">
@@ -35,15 +37,19 @@ export default function Register() {
 
         {/* DIREITA: Card do formulário */}
         <section className="order-1 md:order-2">
-          <div className="mx-auto w-full max-w-md rounded-2xl border bg-white p-6 shadow-sm">
+          <div className="mx-auto w-full max-w-md rounded-2xl border border-green-700 bg-white p-6 shadow-sm">
             <div className="mb-3 text-center">
               <h2 className="text-xl font-semibold">Criar conta</h2>
-              <p className="text-sm text-gray-500">Preencha seus dados para começar.</p>
+              <p className="text-sm text-gray-500">
+                Preencha seus dados para começar.
+              </p>
             </div>
 
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
-                <label className="mb-1 block text-sm font-medium">Nome</label>
+                <label className="mb-1 block text-lg font-medium text-left">
+                  Nome
+                </label>
                 <input
                   type="text"
                   placeholder="Seu nome"
@@ -52,7 +58,9 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="mb-1 block text-sm font-medium">E-mail</label>
+                <label className="mb-1 block text-lg font-medium text-left">
+                  E-mail
+                </label>
                 <input
                   type="email"
                   placeholder="voce@email.com"
@@ -61,21 +69,9 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="mb-1 block text-sm font-medium">
-                  WhatsApp <span className="font-normal text-gray-400">(somente números)</span>
+                <label className="mb-1 block text-lg font-medium text-left">
+                  Senha
                 </label>
-                <input
-                  inputMode="numeric"
-                  placeholder="55999990000"
-                  className="w-full rounded-lg border px-3 py-2 outline-none ring-emerald-500 focus:ring-2"
-                />
-                <p className="mt-1 text-xs text-gray-500">
-                  Usado no botão “Pedir pelo WhatsApp”.
-                </p>
-              </div>
-
-              <div>
-                <label className="mb-1 block text-sm font-medium">Senha</label>
                 <div className="relative">
                   <input
                     type={showPwd ? "text" : "password"}
@@ -93,7 +89,9 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="mb-1 block text-sm font-medium">Confirmar senha</label>
+                <label className="mb-1 block text-lg font-medium text-left">
+                  Confirmar senha
+                </label>
                 <div className="relative">
                   <input
                     type={showPwd2 ? "text" : "password"}
@@ -111,7 +109,10 @@ export default function Register() {
               </div>
 
               <div className="flex items-center gap-2 text-sm">
-                <input type="checkbox" className="h-4 w-4 rounded border-gray-300" />
+                <input
+                  type="checkbox"
+                  className="h-4 w-4 rounded border-gray-300"
+                />
                 <span>
                   Aceito os{" "}
                   <a href="#" className="text-emerald-700 underline">

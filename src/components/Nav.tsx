@@ -5,6 +5,7 @@ const NAV = [
   { to: "/", label: "Home" },
   { to: "#ajuda", label: "Ajuda" },
   { to: "/dashboard", label: "Dashboard" },
+  { to: "/login", label: "Entrar" },
 ];
 
 export default function Nav() {
@@ -27,19 +28,15 @@ export default function Nav() {
             <NavLink
               key={n.label}
               to={n.to}
-              className="text-neutral-600 hover:text-neutral-900"
+              className="relative text-neutral-600 hover:text-neutral-900 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-emerald-600 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-lg"
             >
               {n.label}
             </NavLink>
           ))}
 
-          <Link to="/login" className="text-neutral-700 hover:text-neutral-900">
-            Entrar
-          </Link>
-
           <Link
             to="/register"
-            className="rounded-lg bg-emerald-600 px-4 py-2 font-medium text-white hover:bg-emerald-700"
+            className="rounded-lg bg-emerald-600 px-4 py-2 font-medium text-white hover:bg-emerald-700 text-xl"
           >
             Crie sua conta
           </Link>
@@ -71,20 +68,12 @@ export default function Nav() {
             <NavLink
               key={n.label}
               to={n.to}
-              className="text-neutral-700 hover:text-neutral-900"
+              className="w-fit relative text-neutral-700 hover:text-neutral-900 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-emerald-600 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-lg"
               onClick={() => setOpen(false)}
             >
               {n.label}
             </NavLink>
           ))}
-
-          <Link
-            to="/login"
-            className="text-neutral-700 hover:text-neutral-900"
-            onClick={() => setOpen(false)}
-          >
-            Entrar
-          </Link>
 
           <Link
             to="/register"

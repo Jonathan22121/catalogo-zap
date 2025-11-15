@@ -10,11 +10,12 @@ export default function Login() {
         {/* ESQUERDA: Título + bullets */}
         <section className="order-2 md:order-1">
           <h1 className="text-3xl font-semibold leading-tight md:text-5xl">
-            Entre para gerenciar seu <span className="text-emerald-600">Catálogo</span>
+            Entre para gerenciar seu{" "}
+            <span className="text-emerald-600">Catálogo</span>
           </h1>
           <p className="mt-4 max-w-lg text-gray-600">
-            Publique produtos, compartilhe links de pedido pelo WhatsApp e acompanhe seu
-            catálogo em tempo real.
+            Publique produtos, compartilhe links de pedido pelo WhatsApp e
+            acompanhe seu catálogo em tempo real.
           </p>
 
           <ul className="mt-8 space-y-4 text-gray-800">
@@ -35,7 +36,7 @@ export default function Login() {
 
         {/* DIREITA: Card do login */}
         <section className="order-1 md:order-2">
-          <div className="mx-auto w-full max-w-md rounded-2xl border bg-white p-6 shadow-sm">
+          <div className="mx-auto w-full max-w-md rounded-2xl border border-green-700 bg-white p-6 shadow-lg">
             <div className="mb-3 text-center">
               <h2 className="text-xl font-semibold">Entrar</h2>
               <p className="text-sm text-gray-500">
@@ -44,20 +45,13 @@ export default function Login() {
             </div>
 
             {/* Social (apenas visual) */}
-            <div className="mb-5 grid grid-cols-2 gap-3">
+            <div className="mb-5 grid grid-cols-2 gap-3 justify-center">
               <button
                 type="button"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm hover:bg-gray-50"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm hover:bg-gray-50 w-full"
               >
                 <span className="h-4 w-4 rounded bg-gray-300" />
                 Google
-              </button>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm hover:bg-gray-50"
-              >
-                <span className="h-4 w-4 rounded bg-gray-300" />
-                GitHub
               </button>
             </div>
 
@@ -70,7 +64,9 @@ export default function Login() {
 
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
-                <label className="mb-1 block text-sm font-medium">E-mail</label>
+                <label className="mb-1 block text-lg font-medium text-left">
+                  E-mail
+                </label>
                 <input
                   type="email"
                   placeholder="voce@email.com"
@@ -79,7 +75,9 @@ export default function Login() {
               </div>
 
               <div>
-                <label className="mb-1 block text-sm font-medium">Senha</label>
+                <label className="mb-1 block text-lg font-medium text-left">
+                  Senha
+                </label>
                 <div className="relative">
                   <input
                     type={showPwd ? "text" : "password"}
@@ -98,7 +96,10 @@ export default function Login() {
 
               <div className="flex items-center justify-between text-sm">
                 <label className="flex items-center gap-2">
-                  <input type="checkbox" className="h-4 w-4 rounded border-gray-300" />
+                  <input
+                    type="checkbox"
+                    className="h-4 w-4 rounded border-gray-300"
+                  />
                   Lembrar-me
                 </label>
                 <a href="#" className="text-emerald-700 hover:underline">
@@ -115,7 +116,10 @@ export default function Login() {
 
               <p className="text-center text-sm text-gray-600">
                 Não tem conta?{" "}
-                <Link to="/register" className="text-emerald-700 hover:underline">
+                <Link
+                  to="/register"
+                  className="text-emerald-700 hover:underline"
+                >
                   Criar conta
                 </Link>
               </p>

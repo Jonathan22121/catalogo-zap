@@ -23,9 +23,9 @@ export default function ProductsTable({
   return (
     <section className="rounded-2xl border bg-white p-5 shadow-sm">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h2 className="text-lg font-semibold leading-tight">Produtos</h2>
-          <p className="text-xs text-neutral-500">Gerencie sua vitrine</p>
+        <div className="text-left text-green-700">
+          <h2 className="text-2xl font-bold leading-tight">Produtos</h2>
+          <p className="text-lg text-neutral-500">Gerencie sua vitrine</p>
         </div>
         <button
           type="button"
@@ -38,21 +38,21 @@ export default function ProductsTable({
 
       {/* DESKTOP: só mostra a partir de md */}
       <div className="hidden overflow-x-auto md:block">
-        <table className="min-w-full text-sm">
+        <table className="min-w-full table-fixed text-sm  ">
           <thead>
             <tr className="border-b bg-neutral-50 text-left">
-              <th className="p-2">Foto</th>
-              <th className="p-2">Nome</th>
-              <th className="p-2">Preço</th>
-              <th className="p-2">Disponível</th>
-              <th className="p-2">Ações</th>
+              <th className="w-1/12 p-2">Foto</th>
+              <th className="w-4/12 p-2">Nome</th>
+              <th className="w-2/12 p-2">Preço</th>
+              <th className="w-2/12 p-2">Disponível</th>
+              <th className="w-3/12 p-2">Ações</th>
             </tr>
           </thead>
           <tbody>
             {items.map((p) => (
-              <tr key={p.id} className="border-b">
+              <tr key={p.id} className="border-b even:bg-green-50">
                 <td className="p-2">
-                  <div className="size-12 rounded-lg bg-neutral-200" />
+                  <div className="w-12 h-12 rounded-lg bg-neutral-200" />
                 </td>
                 <td className="p-2">{p.name}</td>
                 <td className="p-2">{currency(p.price)}</td>
@@ -61,13 +61,25 @@ export default function ProductsTable({
                   <div className="flex gap-2">
                     <button
                       onClick={() => onEdit(p)}
-                      className="rounded-lg px-3 py-1.5 text-xs font-medium text-blue-700 ring-1 ring-blue-200 hover:bg-blue-50"
+                      className="
+      rounded-lg px-3 py-1.5 text-xs font-medium 
+      text-blue-700 ring-1 ring-blue-200 
+      transition-all duration-200 ease-in-out 
+      hover:bg-blue-700 hover:text-white hover:ring-blue-700 
+      hover:-translate-y-0.5 hover:shadow-md 
+    "
                     >
                       Editar
                     </button>
                     <button
                       onClick={() => onRemove(p.id)}
-                      className="rounded-lg px-3 py-1.5 text-xs font-medium text-red-700 ring-1 ring-red-200 hover:bg-red-50"
+                      className="
+      rounded-lg px-3 py-1.5 text-xs font-medium 
+      text-red-700 ring-1 ring-red-200 
+      transition-all duration-200 ease-in-out 
+      hover:bg-red-700 hover:text-white hover:ring-red-700 
+      hover:-translate-y-0.5 hover:shadow-md 
+    "
                     >
                       Remover
                     </button>
@@ -127,8 +139,17 @@ export default function ProductsTable({
 
       <div className="mt-5">
         <a
-          className="inline-flex items-center gap-2 rounded-xl bg-neutral-900 px-4 py-2 text-sm font-medium text-white shadow hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-400"
           href="/u/yra"
+          className="
+      inline-flex items-center gap-2 rounded-xl 
+      bg-green-900 px-4 py-2 text-sm font-medium text-white 
+      shadow-md 
+      transition-all duration-200 ease-in-out 
+      hover:bg-green-700 
+      hover:-translate-y-0.5 
+      hover:shadow-lg
+      focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2
+    "
         >
           Ver Catálogo Público <span aria-hidden>↗</span>
         </a>
