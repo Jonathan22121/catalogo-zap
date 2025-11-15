@@ -37,8 +37,10 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* EXEMPLOS (3 cards) */}
-      <section id="exemplos" className="mx-auto max-w-6xl px-4 sm:px-6 pb-6 md:pb-8">
+      <section
+        id="exemplos"
+        className="mx-auto max-w-6xl px-4 sm:px-6 pb-6 md:pb-8"
+      >
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <StoreCard
             title="Barber Prime"

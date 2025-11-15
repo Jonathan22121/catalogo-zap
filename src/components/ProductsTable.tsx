@@ -1,17 +1,25 @@
-import type { Product } from "@/types"
+import type { Product } from "@/types";
 
 function currency(value: number) {
-  return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value)
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  }).format(value);
 }
 
 type Props = {
-  items: Product[]
-  onAdd: () => void
-  onEdit: (product: Product) => void
-  onRemove: (id: string) => void
-}
+  items: Product[];
+  onAdd: () => void;
+  onEdit: (product: Product) => void;
+  onRemove: (id: string) => void;
+};
 
-export default function ProductsTable({ items, onAdd, onEdit, onRemove }: Props) {
+export default function ProductsTable({
+  items,
+  onAdd,
+  onEdit,
+  onRemove,
+}: Props) {
   return (
     <section className="rounded-2xl border bg-white p-5 shadow-sm">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
@@ -88,7 +96,8 @@ export default function ProductsTable({ items, onAdd, onEdit, onRemove }: Props)
               <div>
                 <div className="font-medium">{p.name}</div>
                 <div className="text-sm text-neutral-600">
-                  {currency(p.price)} · {p.available ? "Disponível" : "Indisponível"}
+                  {currency(p.price)} ·{" "}
+                  {p.available ? "Disponível" : "Indisponível"}
                 </div>
               </div>
             </div>
@@ -125,5 +134,5 @@ export default function ProductsTable({ items, onAdd, onEdit, onRemove }: Props)
         </a>
       </div>
     </section>
-  )
+  );
 }

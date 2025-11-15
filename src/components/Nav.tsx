@@ -3,9 +3,8 @@ import { useState } from "react";
 
 const NAV = [
   { to: "/", label: "Home" },
-  { to: "#comunidade", label: "Comunidade" },
-  { to: "#precos", label: "Preços" },
   { to: "#ajuda", label: "Ajuda" },
+  { to: "/dashboard", label: "Dashboard" },
 ];
 
 export default function Nav() {
@@ -14,9 +13,11 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        
         {/* LOGO SEM QUADRADO */}
-        <Link to="/marketing" className="text-xl font-semibold text-neutral-900">
+        <Link
+          to="/marketing"
+          className="text-xl font-semibold text-neutral-900"
+        >
           CatálogoZap
         </Link>
 
@@ -40,7 +41,7 @@ export default function Nav() {
             to="/register"
             className="rounded-lg bg-emerald-600 px-4 py-2 font-medium text-white hover:bg-emerald-700"
           >
-            Experimente grátis
+            Crie sua conta
           </Link>
         </div>
 
@@ -49,8 +50,16 @@ export default function Nav() {
           className="md:hidden rounded-lg p-2 text-neutral-700 hover:bg-neutral-100"
           onClick={() => setOpen((s) => !s)}
         >
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d={open ? "M6 6l12 12M18 6l-12 12" : "M4 6h16M4 12h16M4 18h16"} />
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              d={open ? "M6 6l12 12M18 6l-12 12" : "M4 6h16M4 12h16M4 18h16"}
+            />
           </svg>
         </button>
       </div>
